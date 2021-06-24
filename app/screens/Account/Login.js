@@ -41,7 +41,7 @@ export default function Login() {
       return;
     }
     const response = await fetch(
-      `http://192.168.0.7:8000/api/usuario/${formLogin.rut_usr}/${formLogin.password}`
+      `http://192.168.0.13:8000/api/usuario/${formLogin.rut_usr}/${formLogin.password}`
     );
     const responseJson = await response.json();
     if (!responseJson.success) {
@@ -59,13 +59,6 @@ export default function Login() {
   const onClick = () => {
     setShowPassword(!showPassword);
   };
-
-  // const checkeaLogueado = () => {
-  //   if (auth.rut_usr) {
-  //     navigation.navigate("account");
-  //     console.log({ Login: auth });
-  //   }
-  // };
 
   return (
     <KeyboardAwareScrollView>

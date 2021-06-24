@@ -48,7 +48,7 @@ export default function Home() {
 }
 
 function getList() {
-  return fetch("http://192.168.0.7:8000/api/documentos/").then((data) =>
+  return fetch("http://192.168.0.13:8000/api/documentos/").then((data) =>
     data.json()
   );
 }

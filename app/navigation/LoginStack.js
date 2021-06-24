@@ -15,25 +15,6 @@ export default function LoginStack() {
   const { auth } = useContext(AuthContext);
   const [isLogged, setIsLogged] = useState();
 
-  // AsyncStorage.getItem("auth").then((resp) => {
-  //   console.log({ resp: resp.rut_usr });
-  //   if (resp.rut_usr) {
-  //     setIsLogged(true);
-  //   } else {
-  //     setIsLogged(false);
-  //   }
-  // });
-
-  // useEffect(() => {
-  //   if (auth.rut_usr) {
-  //     console.log("Si");
-  //     navigation.navigate("account");
-  //   } else {
-  //     console.log("no");
-  //     navigation.navigate("login");
-  //   }
-  // }, [auth]);
-
   return (
     <Stack.Navigator>
       <Stack.Screen

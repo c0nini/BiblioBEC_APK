@@ -16,7 +16,7 @@ export default function Navigation() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="home"
+        initialRouteName="login"
         tabBarOptions={{
           inactiveTintColor: "#646464",
           activeTintColor: "#1694bc",
