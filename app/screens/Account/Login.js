@@ -41,15 +41,16 @@ export default function Login() {
       return;
     }
     const response = await fetch(
-      `http://192.168.0.13:8000/api/usuario/${formLogin.rut_usr}/${formLogin.password}`
+      `http://192.168.0.7:8000/api/usuario/${formLogin.rut_usr}/${formLogin.password}`
     );
     const responseJson = await response.json();
+    
     if (!responseJson.success) {
       toastRef.current.show(responseJson.error);
       return;
     }
     await setAuth(responseJson.data);
-    navigation.navigate("account");
+    responseJson.data.estado == 0 ? toastRef.current.show('Su cuenta está desactivada.') : navigation.navigate("account");
   };
 
   const onChange = (e, type) => {

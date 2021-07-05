@@ -55,7 +55,7 @@ export default function Informes() {
 }
 
 function getList(rut_usr) {
-  return fetch(`http://192.168.0.13:8000/api/prestamos/${rut_usr}/`).then(
+  return fetch(`http://192.168.0.7:8000/api/prestamos/${rut_usr}/`).then(
     (data) => data.json()
   );
 }
